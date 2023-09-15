@@ -2,7 +2,7 @@ import requests
 
 url = "http://localhost:8000/check_zip"  # Change this to the appropriate URL
 
-file_path = "C:\\Users\\Syrym.Nurbaturov\\PycharmProjects\\storage\\zip.zip"
+file_path = "C:\\Users\\Syrym.Nurbaturov\\PycharmProjects\\storage\\cv3.0.zip"
 files = {'zip_file': open(file_path, 'rb')}  # Create a dictionary with field name and file object
 
 response = requests.post(url, files=files)

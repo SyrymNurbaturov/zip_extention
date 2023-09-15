@@ -63,10 +63,6 @@ def check_zip(zip_file: UploadFile = File(...)):
         print("Exception:", str(e))
 
         return JSONResponse(content={"error": "An error occurred while processing the file. Details: " + str(e)}, status_code=500)
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
-
 language_dict = {
     '.php': 'PHP',
     '.py': 'Python',
@@ -196,7 +192,6 @@ config_dict = {
     '.war': 'Web Archive',
     '.ear': 'Enterprise Archive',
 }
-
-
-
+if __name__ == "__main__":
+    uvicorn.run(app, host="127.0.0.1", port=8000)
 
